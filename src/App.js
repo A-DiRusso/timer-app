@@ -8,7 +8,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      time: 0,
+      time: 3,
       isOn: false,
       start: 0
     }
@@ -21,7 +21,12 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
             <h2>Timer App</h2>
-            <StartWatch />
+            {
+              this.state.time ? <h1>{this.state.time}</h1>
+                              :
+                              null
+            }
+            <StartWatch time={this.state.time}/>
             <StopWatch />
             <ResetWatch />
         </header>

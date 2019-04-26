@@ -1,12 +1,12 @@
 import React from 'react'
 
-function StartWatch() {
+function StartWatch(props) {
   return (
       <ul>
           {
               <button
                     onClick={() => 
-                             console.log('start')}
+                             console.log(props.time)}
               >Start</button>
           }
       </ul>
