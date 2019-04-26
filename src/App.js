@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import StartWatch from './StartWatch';
 
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
     <div className="App">
       <header className="App-header">
           <h2>Timer App</h2>
-          <button>Start</button>
+          <StartWatch />
       </header>
     </div>
   );
