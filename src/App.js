@@ -8,7 +8,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      time: 3,
+      time: 32,
       isOn: false,
       start: 0
     }
@@ -28,12 +28,16 @@ class App extends React.Component {
             }
             <StartWatch time={this.state.time}/>
             <StopWatch />
-            <ResetWatch />
+            <ResetWatch handleClick={this._resetTime}/>
         </header>
       </div>
     );
   }
-  
+  _resetTime = () => {
+    this.setState({
+      time: 0
+    })
+  }
 }
 
 export default App;

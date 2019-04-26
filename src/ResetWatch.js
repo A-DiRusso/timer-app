@@ -1,12 +1,12 @@
 import React from 'react'
 
-function ResetWatch() {
+function ResetWatch(props) {
   return (
     <ul>
         {
             <button
                 onClick={() => {
-                    console.log('reset');
+                    props.handleClick(props.time);
                 }}
             >Reset</button>
         }
