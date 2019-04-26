@@ -34,13 +34,17 @@ class App extends React.Component {
     );
   }
   _startTime = () => {
-    this.setState({
-      time: 9
-    })
+    setInterval((time) => {
+      this.setState({
+        time: this.state.time + 1,
+        isOn: true
+      })
+    }, 1000)
   }
   _stopTime = () => {
     this.setState({
-      time: 0
+      time: 0,
+      isOn: false
     })
   }
   _resetTime = () => {
@@ -52,3 +56,4 @@ class App extends React.Component {
 }
 
 export default App;
+
