@@ -6,7 +6,7 @@ function StartWatch() {
           {
               <button
                     onClick={() => 
-                             console.log('click')}
+                             console.log('start')}
               >Start</button>
           }
       </ul>
