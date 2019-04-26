@@ -24,20 +24,31 @@ class App extends React.Component {
             {
               this.state.time ? <h1>{this.state.time}</h1>
                               :
-                              null
+                              0
             }
-            <StartWatch time={this.state.time}/>
-            <StopWatch />
+            <StartWatch time={this.state.time} handleClick={this._startTime}/>
+            <StopWatch handleClick={this._stopTime}/>
             <ResetWatch handleClick={this._resetTime}/>
         </header>
       </div>
     );
   }
-  _resetTime = () => {
+  _startTime = () => {
+    this.setState({
+      time: 9
+    })
+  }
+  _stopTime = () => {
     this.setState({
       time: 0
     })
   }
+  _resetTime = () => {
+    this.setState({
+      time: 1000
+    })
+  }
+  
 }
 
 export default App;

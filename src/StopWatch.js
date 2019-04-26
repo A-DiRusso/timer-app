@@ -1,12 +1,12 @@
 import React from 'react'
 
-function StopWatch() {
+function StopWatch(props) {
   return (
     <ul>
         {
             <button
                 onClick={() => {
-                    console.log('Stop')
+                    props.handleClick(props.time)
                 }}
             >Stop</button>
         }

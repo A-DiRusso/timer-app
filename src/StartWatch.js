@@ -5,8 +5,9 @@ function StartWatch(props) {
       <ul>
           {
               <button
-                    onClick={() => 
-                             console.log(props.time)}
+                    onClick={() => {
+                        props.handleClick(props.time)
+                    }}
               >Start</button>
           }
       </ul>
